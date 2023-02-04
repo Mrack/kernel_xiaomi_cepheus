@@ -64,7 +64,7 @@ modules.builtin
 # Debian directory (make deb-pkg)
 #
 /debian/
-
+/out/
 #
 # tar directory (make tar*-pkg)
 #

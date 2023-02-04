@@ -1860,7 +1860,7 @@ static s64 cpuset_read_s64(struct cgroup_subsys_state *css, struct cftype *cft)
 
 static struct cftype files[] = {
 	{
-		.name = "cpus",
+		.name = "cpuset.cpus",
 		.seq_show = cpuset_common_seq_show,
 		.write = cpuset_write_resmask,
 		.max_write_len = (100U + 6 * NR_CPUS),
@@ -1868,7 +1868,7 @@ static struct cftype files[] = {
 	},
 
 	{
-		.name = "mems",
+		.name = "cpuset.mems",
 		.seq_show = cpuset_common_seq_show,
 		.write = cpuset_write_resmask,
 		.max_write_len = (100U + 6 * MAX_NUMNODES),
@@ -1876,81 +1876,81 @@ static struct cftype files[] = {
 	},
 
 	{
-		.name = "effective_cpus",
+		.name = "cpuset.effective_cpus",
 		.seq_show = cpuset_common_seq_show,
 		.private = FILE_EFFECTIVE_CPULIST,
 	},
 
 	{
-		.name = "effective_mems",
+		.name = "cpuset.effective_mems",
 		.seq_show = cpuset_common_seq_show,
 		.private = FILE_EFFECTIVE_MEMLIST,
 	},
 
 	{
-		.name = "cpu_exclusive",
+		.name = "cpuset.cpu_exclusive",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_CPU_EXCLUSIVE,
 	},
 
 	{
-		.name = "mem_exclusive",
+		.name = "cpuset.mem_exclusive",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_MEM_EXCLUSIVE,
 	},
 
 	{
-		.name = "mem_hardwall",
+		.name = "cpuset.mem_hardwall",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_MEM_HARDWALL,
 	},
 
 	{
-		.name = "sched_load_balance",
+		.name = "cpuset.sched_load_balance",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_SCHED_LOAD_BALANCE,
 	},
 
 	{
-		.name = "sched_relax_domain_level",
+		.name = "cpuset.sched_relax_domain_level",
 		.read_s64 = cpuset_read_s64,
 		.write_s64 = cpuset_write_s64,
 		.private = FILE_SCHED_RELAX_DOMAIN_LEVEL,
 	},
 
 	{
-		.name = "memory_migrate",
+		.name = "cpuset.memory_migrate",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_MEMORY_MIGRATE,
 	},
 
 	{
-		.name = "memory_pressure",
+		.name = "cpuset.memory_pressure",
 		.read_u64 = cpuset_read_u64,
 		.private = FILE_MEMORY_PRESSURE,
 	},
 
 	{
-		.name = "memory_spread_page",
+		.name = "cpuset.memory_spread_page",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_SPREAD_PAGE,
 	},
 
 	{
-		.name = "memory_spread_slab",
+		.name = "cpuset.memory_spread_slab",
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
 		.private = FILE_SPREAD_SLAB,
 	},
 
 	{
-		.name = "memory_pressure_enabled",
+		.name = "cpuset.memory_pressure_enabled",
 		.flags = CFTYPE_ONLY_ON_ROOT,
 		.read_u64 = cpuset_read_u64,
 		.write_u64 = cpuset_write_u64,
