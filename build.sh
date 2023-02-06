@@ -2,8 +2,8 @@ DATE=$(date +"%Y%m%d-$RANDOM")
 KERNEL_NAME=mrack-cepheus-"$DATE"
 
 export KERNEL_PATH=$PWD
-export ANYKERNEL_PATH=/home/mrack/Anykernel3
-export CLANG_PATH=/home/mrack/prelude-clang
+export ANYKERNEL_PATH=$PWD/Anykernel3
+export CLANG_PATH=$PWD/prelude-clang
 export PATH=${CLANG_PATH}/bin:${PATH}
 export CLANG_TRIPLE=aarch64-linux-gnu-
 export ARCH=arm64
